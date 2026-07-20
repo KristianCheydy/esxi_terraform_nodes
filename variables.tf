@@ -1,7 +1,7 @@
 variable "esxi_hostname" {
   type = string
   description = "hostname"
-  sensetive = true
+  sensitive = true
 }
 
 variable "esxi_hostport" {
@@ -15,17 +15,22 @@ variable "esxi_hostssl" {
 variable "esxi_username" {
   type = string
   description = "esxi_username"
-  sensetive = true
+  sensitive = true
 }
 
 variable "esxi_password" {
   type = string
   description = "esxi_pass"
-  sensetive = true
+  sensitive = true
 }
 
-variable "vmIP" {
-  default = "192.168.20.108/19"
+variable "vm_subnet" {
+  default = "192.168.20.0/19"
+}
+
+variable "vm_start_ip_offset" {
+  type = number
+  default = 108
 }
 
 variable "vmGateway" {
@@ -45,8 +50,8 @@ variable "vm_hostname" {
 variable "vm_password" {
   type = string
   description = "VM Pass"
-  sensetive = true
-
+  sensitive = true
+}
 variable "ovf_file" {
   type = string
   description = "Path to ovf"

@@ -24,7 +24,7 @@ resource "esxi_guest" "vm_nodes" {
   guestinfo = { 
     "user-data"         = base64encode(templatefile("${path.module}/userdata.tftpl", {
       hostname = "node-0${count.index + 1}"
-      ip_addr = "192.168.20.${108 + count.index}"
+      ip_addr = cidrhost(var.vm_subnet, var.vm_start_ip_offset + count.index)
       vm_password = var.vm_password
     }))
     "user-data.encoding" = "base64"
