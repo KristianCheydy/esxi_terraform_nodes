@@ -5,10 +5,12 @@ variable "esxi_hostname" {
 }
 
 variable "esxi_hostport" {
+  type = string
   default = "22"
 }
 
 variable "esxi_hostssl" {
+  type = string
   default = "443"
 }
 
@@ -25,6 +27,7 @@ variable "esxi_password" {
 }
 
 variable "vm_subnet" {
+  type = string
   default = "192.168.20.0/19"
 }
 
@@ -33,19 +36,6 @@ variable "vm_start_ip_offset" {
   default = 108
 }
 
-variable "vmGateway" {
-  type = string
-  description = "Gateway" 
-  
-}
-
-variable "nameserver" {
-  default = "8.8.8.8"
-}
-
-variable "vm_hostname" {
-  default = "vmtest01"
-}
 
 variable "vm_password" {
   type = string
