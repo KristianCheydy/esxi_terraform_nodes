@@ -17,6 +17,6 @@ An automated terraform configuration for batch deployment of Ubuntu machines on 
 ### 1.Clone the Repository
 
 ```bash
- gitclone [https://github.com/KristianCheydy/esxi_terraform_nodes.git](https://github.com/KristianCheydy/esxi_terraform_nodes.git]
+ gitclone https://github.com/KristianCheydy/esxi_terraform_nodes.git
  cd esxi_terraform_nodes
 ```
