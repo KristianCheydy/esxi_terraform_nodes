@@ -12,7 +12,7 @@ provider "esxi" {
 
 
 resource "esxi_guest" "vm_nodes" {
-  count      = 2
+  count      = var.vm_count
   guest_name = "node-0${count.index + 1}"
   disk_store = "datastore"
   ovf_source = var.ovf_file

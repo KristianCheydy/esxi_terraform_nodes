@@ -26,6 +26,11 @@ variable "esxi_password" {
   sensitive   = true
 }
 
+variable "vm_count" {
+  type = number
+  default = 2
+}
+
 variable "vm_subnet" {
   type    = string
   default = "192.168.20.0/19"
