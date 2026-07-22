@@ -33,7 +33,7 @@ variable "vm_count" {
 
 variable "vm_subnet" {
   type    = string
-  default = "192.168.20.0/19"
+  default = "192.168.20.0/24"
 }
 
 variable "vm_start_ip_offset" {
@@ -50,4 +50,14 @@ variable "vm_password" {
 variable "ovf_file" {
   type        = string
   description = "Path to ovf"
+}
+
+variable "memsize" {
+  type = string
+  default = "4096"
+}
+
+variable "numvcpus" {
+  type = string
+  default = "2"
 }

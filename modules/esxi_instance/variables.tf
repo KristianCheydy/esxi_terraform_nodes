@@ -3,13 +3,35 @@ variable "vm_name" {
   description = "Name of virtual machine"
 }
 
-variable "ram_mb" {
+variable "numvcpus" {
   type = number
-  default = 2048
-  description = "Size of ram in MB"
+  default = 2
+  description = "Cpu count"
 }
 
-variable "ip_address" {
+variable "memsize" {
+  type = number
+  default = 2048
+}
+
+variable "virtual_network" {
+  type = string
+  default = "VM Network"
+}
+
+variable "ip_addr" {
   type = string
 }
 
+variable "disk_store" {
+  type = string
+}
+
+variable "ovf_file" {
+  type = string
+}
+
+variable "vm_password" {
+  type = string
+  sensitive = true
+}

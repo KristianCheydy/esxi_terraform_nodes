@@ -1,6 +1,6 @@
 #cloud-config
 
-hostname" ${hostname}
+hostname: "${hostname}"
 
 users:
   - name: ubuntu
@@ -21,7 +21,7 @@ write_files:
       network:
         version: 2
         ethernets:
-          ens32:
+          ens192:
             dhcp4: false
             addresses:
               - ${ip_addr}/19

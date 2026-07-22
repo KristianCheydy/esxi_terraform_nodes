@@ -1,5 +1,5 @@
 output "ip" {
-  value = var.ip_address
+  value = var.ip_addr
 }
 
 output "vm_id" {
